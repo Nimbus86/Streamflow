@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Dashboard</h1>
+<div class="modules-grid">
+    <!-- Modules dynamisch inladen -->
+    {% for name, info in current_app.blueprints.items() %}
+      {% if name not in ['auth'] %}
+        <div class="module-card">
+          <a href="/{{ name }}/">{{ name|capitalize }}</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

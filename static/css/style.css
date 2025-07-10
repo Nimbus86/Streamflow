@@ -1,0 +1,129 @@
+/* ===== Basis Layout ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #111827;
+    color: #f3f4f6;
+    line-height: 1.6;
+    text-align: center;
+}
+
+a {
+    color: #93c5fd;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Navigatiebalk ===== */
+nav {
+    background-color: #1f2937;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin-left: 1rem;
+    color: #e0e7ff;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #a5b4fc;
+}
+
+/* ===== Container ===== */
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Flash Messages ===== */
+.flash {
+    background-color: #10b981;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== Buttons ===== */
+button, .btn {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #4f46e5;
+}
+
+/* ===== Formulieren ===== */
+form textarea, form input, form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #1e293b;
+    color: #f9fafb;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+/* ===== Modules op dashboard ===== */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.module-card {
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    background-color: #2c3e50;
+}
+
+.module-card a {
+    color: #facc15;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* ===== Responsiviteit ===== */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 0.25rem 0;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
